@@ -43,6 +43,8 @@ def check_if_in_errors(host,community,interface):
 				fo2.seek(0)
 				fo2.truncate()
 				fo2.write(str(actual_value_out))
+				fo.close()
+				fo2.close()
 				# PRINT MESSAGE AND EXIT
 				print "Critical - Interface {} is increasing errors".format(interface)
 				sys.exit(2)
@@ -54,6 +56,8 @@ def check_if_in_errors(host,community,interface):
 				fo2.seek(0)
 				fo2.truncate()
 				fo2.write(str(actual_value_out))
+				fo.close()
+				fo2.close()
 				# PRINT MESSAGE AND EXIT
 				print "OK - Interface {} is not increasing errors".format(interface)
 				sys.exit(0)
